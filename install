@@ -1,15 +1,34 @@
 #!/bin/bash
 
-cd ~
-mv dotfiles .dotfiles
+# Declaration
+die () {
+    echo Failed to $1
+    exit 1
+}
 
-ln -s .dotfiles/vim/vimrc .vimrc
+FILE_LOCATION=( "vim/vimrc" "bash_additions" "scripts" "i3/config" "i3/statusbar" )
+LINK_LOCATION=( ".vimrc" ".bash_additions" ".scripts" ".i3/config" ".i3status.conf" )
+AMOUNT_FILES=${#LINK_LOCATION[@]}
+(( AMOUNT_FILES-- ))
+PREFIX=~/.dotfiles/
+OLD_FILES_DIR=.old_files
 
-ln -s .dotfiles/bash_additions .bash_additions
-ln -s .dotfiles/scripts .scripts
+# Action
+cd ~ || die "cd to ~"
+mv dotfiles .dotfiles || die "move dotfiles to .dotfiles"
 
-ln -s .dotfiles/i3/config .i3/config
-ln -s .dotfiles/i3/statusbar .i3status.conf
+for i in `seq 0 $AMOUNT_FILES`; do
+    file="$PREFIX${FILE_LOCATION[$i]}"
+    link="${LINK_LOCATION[$i]}"
+    if ! ln -s "$file" "$link" 2>/dev/null; then
+        if [ ! -d "$OLD_FILES_DIR" ]; then
+            mkdir "$OLD_FILES_DIR" || die "make directory for old files"
+        fi
+        mv "$link" "$OLD_FILES_DIR/$link" || die "move $link to old files directory"
+    fi
+    ln -s "$file" "$link" || die "to create link from $link to $file"
+done
+exit
 
-echo '' >> .bashrc
-echo 'source ~/.dotfiles/bash_additions/all' >> .bashrc
+echo '' >> .bashrc || die "change .bashrc"
+echo 'source ~/.dotfiles/bash_additions/all' >> .bashrc || die "change .bashrc"
