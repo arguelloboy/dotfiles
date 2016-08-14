@@ -11,7 +11,6 @@ LINK_LOCATION=( ".vimrc" ".bash_additions" ".scripts" ".i3/config" ".i3status.co
 AMOUNT_FILES=${#LINK_LOCATION[@]}
 (( AMOUNT_FILES-- ))
 PREFIX=~/.dotfiles/
-OLD_FILES_DIR=.old_files
 
 # Action
 cd ~ || die "cd to ~"
@@ -20,15 +19,9 @@ mv dotfiles .dotfiles || die "move dotfiles to .dotfiles"
 for i in `seq 0 $AMOUNT_FILES`; do
     file="$PREFIX${FILE_LOCATION[$i]}"
     link="${LINK_LOCATION[$i]}"
-    if ! ln -s "$file" "$link" 2>/dev/null; then
-        if [ ! -d "$OLD_FILES_DIR" ]; then
-            mkdir "$OLD_FILES_DIR" || die "make directory for old files"
-        fi
-        mv "$link" "$OLD_FILES_DIR/$link" || die "move $link to old files directory"
-    fi
-    ln -s "$file" "$link" || die "to create link from $link to $file"
+    ln -n -s -f "$file" "$link" || die "to create link from $link to $file"
+    # -f = replace existing, -n = treat as normal if its a directory
 done
-exit
 
 echo '' >> .bashrc || die "change .bashrc"
 echo 'source ~/.dotfiles/bash_additions/all' >> .bashrc || die "change .bashrc"
