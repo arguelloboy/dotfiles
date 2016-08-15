@@ -26,6 +26,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'takac/vim-hardtime'
 
 call vundle#end()
 filetype plugin indent on

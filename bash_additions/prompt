@@ -46,7 +46,7 @@ _display_exit_status()
 
     (( $RV == 0 )) && color=$GOOD_EXIT_STATUS || color=$BAD_EXIT_STATUS
 
-    echo "\\[$(tput setab $color; tput bold)\\][$RV]$(_transition $color $USERNAME)"
+    echo "\\[$(tput sgr0; tput setab $color; tput bold)\\][$RV]$(_transition $color $USERNAME)"
 }
 
 
