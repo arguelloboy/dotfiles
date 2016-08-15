@@ -13,17 +13,21 @@ general {
 
 order += "wireless wlan0"
 order += "battery 0"
+order += "cpu_usage"
 order += "tztime local"
 
 wireless wlan0 {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
+        format_up = "%essid: %quality %bitrate %ip"
+        format_down = "No wifi :("
 }
 
 battery 0 {
         format = "%status %percentage %remaining"
 }
 
+cpu_usage {
+    format = "%usage"
+}
 
 tztime local {
         format = "%H:%M:%S"

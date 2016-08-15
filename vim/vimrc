@@ -107,6 +107,7 @@ nnoremap <expr> <leader>q OpenTmp()
 
 " Other
 nnoremap 0 ^
+nnoremap ^ 0
 
 """""""""""""""""""""""""
 " => Autocmds and cmds  "
