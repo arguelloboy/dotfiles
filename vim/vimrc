@@ -28,6 +28,7 @@ Plugin 'davidhalter/jedi-vim'
 " Custom motions
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
 
 " Hardtime :D
 Plugin 'takac/vim-hardtime'
