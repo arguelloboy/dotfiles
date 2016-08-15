@@ -7,8 +7,12 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #########################
 # => Shortcuts          #
 #########################
-bindsym $mod+t      exec terminator
-bindsym $mod+c      exec chromium-browser
+# Programs
+bindsym $mod+t exec terminator
+bindsym $mod+c exec chromium-browser
+
+# Lock
+bindsym Mod1+l exec i3lock -c 000000
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -16,7 +20,6 @@ bindsym $mod+Shift+q kill
 #########################
 # => Focus              "
 #########################
-
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
