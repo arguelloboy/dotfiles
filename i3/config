@@ -68,17 +68,23 @@ bindsym $mod+a focus parent
 #########################
 # => Workspaces         #
 #########################
+
+set $work1 "terminal"
+set $work2 "web"
+set $work3 "chat"
+set $work4 "random"
+
 # switch to workspace
-bindsym $mod+1 workspace "1: term"
-bindsym $mod+2 workspace "2: web"
-bindsym $mod+3 workspace "3: com"
-bindsym $mod+4 workspace "4: rand"
+bindsym $mod+1 workspace $work1
+bindsym $mod+2 workspace $work2
+bindsym $mod+3 workspace $work3
+bindsym $mod+4 workspace $work4
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+1 move container to workspace $work1
+bindsym $mod+Shift+2 move container to workspace $work2
+bindsym $mod+Shift+3 move container to workspace $work3
+bindsym $mod+Shift+4 move container to workspace $work4
 
 #########################
 # => Reload and restart #

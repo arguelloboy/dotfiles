@@ -11,7 +11,6 @@
 """""""""""""""""""""""""
 " => Vundle             "
 """""""""""""""""""""""""
-set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -54,7 +53,6 @@ set magic
 set showmatch 
 set noerrorbells
 set novisualbell
-set t_vb= " Confirm
 set tm=500
 set foldcolumn=1
 set background=dark
@@ -77,15 +75,18 @@ set mouse=nvc
 """""""""""""""""""""""""
 " => Maps               "
 """""""""""""""""""""""""
+" Window movement
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Escaping from insert
 inoremap jk <Esc>
 inoremap kj <Esc>
 inoremap <Esc> <Nop>
 
+" Disable arrows
 map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
@@ -103,6 +104,9 @@ nmap <leader>w :w<cr>
 " Commands / functions
 map <leader><leader> :Encrypt<cr>
 nnoremap <expr> <leader>q OpenTmp()
+
+" Other
+nnoremap 0 ^
 
 """""""""""""""""""""""""
 " => Autocmds and cmds  "
