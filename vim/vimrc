@@ -5,6 +5,7 @@
 " => Maps                              "
 " => Functions                         "
 " => Autocmds and cmds                 "
+" => HardTime                          "
 " => Misc                              "
 """"""""""""""""""""""""""""""""""""""""
 
@@ -18,15 +19,21 @@ call vundle#begin()
 
 " Plugins go here
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Lokaltog/vim-distinguished' " Color scheme
-Plugin 'kien/ctrlp.vim'
+
+" Syntax
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
+Plugin 'davidhalter/jedi-vim'
+
+" Custom motions
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'davidhalter/jedi-vim'
+
+" Hardtime :D
 Plugin 'takac/vim-hardtime'
+
+" Color theme
+Plugin 'Lokaltog/vim-distinguished' " Color scheme
 
 call vundle#end()
 filetype plugin indent on
@@ -151,6 +158,12 @@ endfunction
 function! OpenTmp()
     return ":e" . system("mktemp") . "\n"
 endfunc
+
+"""""""""""""""""""""""""
+" => HardTime           "
+"""""""""""""""""""""""""
+let g:hardtime_allow_different_key = 1
+let g:hardtime_default_on = 1
 
 """""""""""""""""""""""""
 " => Misc               "
