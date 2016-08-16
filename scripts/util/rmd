@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rmd () {
+    tmp=`mktemp tmp.XXX.html`
+    pandoc $1 >$tmp
+    chromium-browser $tmp
+    rm $tmp
+}

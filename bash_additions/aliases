@@ -33,11 +33,3 @@ alias e="exit"
 alias py="python3"
 alias eb="c; exec bash"
 alias exe="chmod +x"
-
-rmd () {
-    tmp=`mktemp tmp.XXX.html`
-    pandoc $1 >$tmp
-    chromium-browser $tmp
-    rm $tmp
-}
-
