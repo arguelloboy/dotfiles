@@ -23,8 +23,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Syntax
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
-" Plugin 'davidhalter/jedi-vim' TODO fix - not working with neovim currently,
-" needs provider
+Plugin 'davidhalter/jedi-vim'
 
 " Custom motions
 Plugin 'tpope/vim-surround'
@@ -94,12 +93,6 @@ map <C-l> <C-W>l
 inoremap jk <Esc>
 inoremap kj <Esc>
 inoremap <Esc> <Nop>
-
-" Disable arrows
-map <Left> <Nop>
-map <Right> <Nop>
-map <Up> <Nop>
-map <Down> <Nop>
 
 " Leader
 let mapleader = ","
@@ -172,6 +165,7 @@ endfunc
 """""""""""""""""""""""""
 let g:hardtime_allow_different_key = 1
 let g:hardtime_default_on = 1
+let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 
 """""""""""""""""""""""""
 " => Misc               "
