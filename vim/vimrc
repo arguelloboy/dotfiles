@@ -3,8 +3,8 @@
 " => Vundle                            "
 " => Options                           "
 " => Maps                              "
-" => Functions                         "
 " => Autocmds and cmds                 "
+" => Functions                         "
 " => HardTime                          "
 " => Misc                              "
 """"""""""""""""""""""""""""""""""""""""
@@ -23,7 +23,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Syntax
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim' TODO fix - not working with neovim currently,
+" needs provider
 
 " Custom motions
 Plugin 'tpope/vim-surround'
@@ -51,14 +52,13 @@ set wildignore=*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
 set ruler
 set cmdheight=1
-set backspace=eol,indent " TODO Confirm
+set backspace=eol,indent
 set whichwrap+=<,>,h,l
 set ignorecase
 set smartcase
 set hlsearch
 set incsearch 
 set lazyredraw 
-set magic
 set showmatch 
 set noerrorbells
 set novisualbell
@@ -114,9 +114,16 @@ nmap <leader>w :w<cr>
 map <leader><leader> :Encrypt<cr>
 nnoremap <expr> <leader>q OpenTmp()
 
-" Other
+" Swapping 0 and ^, I like more the ^ functionality and 0 is easier to hit
 nnoremap 0 ^
 nnoremap ^ 0
+
+" Run current program with python
+nnoremap <leader>p  :!python3 %<cr>
+nnoremap <leader>p3 :!python3 %<cr>
+nnoremap <leader>p2 :!python2 %<cr>
+nnoremap <leader>pp :!python3 % 
+" pp in case I need arguments, notice the trailing space before EOL
 
 """""""""""""""""""""""""
 " => Autocmds and cmds  "
