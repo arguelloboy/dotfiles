@@ -34,3 +34,4 @@ alias py="python3"
 alias eb="c; exec bash"
 alias exe="chmod +x"
 alias mc="java -jar ~/random/Minecraft.jar & disown && e"
+alias vim="echo"  # Force myself to start using "vi", it's shorter :D (Could change to "rm" >:D)
