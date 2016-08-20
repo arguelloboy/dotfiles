@@ -1,4 +1,4 @@
-"=> Vundle
+"==> Vundle
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -25,9 +25,8 @@ Plugin 'Lokaltog/vim-distinguished'
 
 call vundle#end()
 filetype plugin indent on
-"<=
-
-"=> Options
+"<==
+"==> Options
 syntax enable 
 set history=500
 set so=7
@@ -37,7 +36,7 @@ set wildignore=*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
 set cmdheight=1
 set backspace=eol,indent
-set whichwrap+=h,l
+set whichwrap=h,l
 set ignorecase
 set smartcase
 set hlsearch
@@ -62,9 +61,8 @@ set gdefault
 set showcmd
 set clipboard=unnamed
 set mouse=nvc
-"<=
-
-"=> Maps
+"<==
+"==> Maps
 " Window movement
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -103,9 +101,8 @@ nnoremap <leader>p2 :!python2 %<cr>
 nnoremap <leader>pp :!python3 % 
 " pp in case I need arguments,
 " Notice the trailing space before EOL and lack of <cr>
-"<=
-
-"=> Autocmds and cmds
+"<==
+"==> Autocmds and cmds
 " Highlights trailing spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -118,8 +115,8 @@ command! Encrypt normal ggg?G``ggg~G``
 command! Bclose call <SID>BufcloseCloseIt()
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " Return to last edit position when opening files
-
-"=> Functions
+"<==
+"==> Functions
 " Close buffer
 function! <SID>BufcloseCloseIt()
    let l:currentBufNum = bufnr("%")
@@ -144,16 +141,13 @@ endfunction
 function! OpenTmp()
     return ":e" . system("mktemp") . "\n"
 endfunc
-"<=
-
-"=> HardTime
+"<==
+"==> HardTime
 let g:hardtime_allow_different_key = 1
 let g:hardtime_default_on = 1
 let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
-"<=
-
-"=> Colorscheme
+"<==
+"==> Colorscheme
 colorscheme distinguished
-"<=
-
-" vim:foldmethod=marker:foldmarker=\=>,<\=:
+"<==
+" vim:foldmethod=marker:foldmarker=\=\=>,<\=\=:

@@ -22,6 +22,10 @@ c) #Chrome
 t) #Terminator
     cmd="terminator"
     toDetach="true" ;;
+mc) #Minecraft
+    cmd="mc" ;;
+tor) #Tor
+    cmd="~/downloads/tor-browser_en-US/start-tor-browser.desktop" ;;
 esac
 
 
