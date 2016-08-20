@@ -6,8 +6,8 @@ die () {
     exit 1
 }
 
-FILE_LOCATION=( "vim/vimrc" "bash_additions" "scripts" "i3/config" "i3/statusbar" )
-LINK_LOCATION=( ".vimrc" ".bash_additions" ".scripts" ".i3/config" ".i3status.conf" )
+FILE_LOCATION=( "vim/vimrc" "bash_additions" "scripts" "i3/config" "i3/statusbar" "vim/UltiSnips")
+LINK_LOCATION=( ".vimrc" ".bash_additions" ".scripts" ".i3/config" ".i3status.conf" ".vim/UltiSnips")
 AMOUNT_FILES=${#LINK_LOCATION[@]}
 (( AMOUNT_FILES-- ))
 PREFIX=~/.dotfiles/

@@ -7,10 +7,11 @@ call vundle#begin()
 " Plugins go here
 Plugin 'VundleVim/Vundle.vim'
 
-" Syntax
+" Languages
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'Shougo/deoplete.nvim'
 
 " Custom motions
 Plugin 'tpope/vim-surround'
@@ -22,6 +23,10 @@ Plugin 'takac/vim-hardtime'
 
 " Color theme
 Plugin 'Lokaltog/vim-distinguished'
+
+" Ultisnips
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()
 filetype plugin indent on
@@ -148,6 +153,21 @@ let g:hardtime_default_on = 1
 let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 "<==
 "==> Colorscheme
+set background=dark
 colorscheme distinguished
+"<==
+"==> UltiSnips
+" Settings
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+
+" Automatic filetype for vim
+autocmd BufRead ~/.vimrc UltiSnipsAddFiletypes vimrc.vim
+"<==
+"==> Deoplete
+let g:deoplete#enable_at_startup = 1
 "<==
 " vim:foldmethod=marker:foldmarker=\=\=>,<\=\=:

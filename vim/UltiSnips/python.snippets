@@ -1,0 +1,37 @@
+global !p
+def format(opts):
+	if len(opts) == 1:
+		return opts[0]
+	elif not opts:
+		return ""
+	else:
+		return "(" + " | ".join(opts) + ")"
+
+
+def complete(t, opts):
+	if t:
+		opts = [ opt[len(t):] for opt in opts if opt.startswith(t) ]
+	return opts
+
+
+def tidy(lst):
+	return list(reversed(sorted(lst)))
+endglobal
+
+snippet todo "A todo"
+# TODO($1`!p
+
+TODO_OPTIONS = tidy("""
+todo
+test
+implement
+fix
+confirm
+finish
+change
+""".split())
+
+snip.rv = format(complete(t[1], TODO_OPTIONS))
+`): ${2:todo} `date +'%F %T'`
+$0
+endsnippet
