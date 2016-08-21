@@ -25,7 +25,7 @@ t) #Terminator
 mc) #Minecraft
     cmd="mc" ;;
 tor) #Tor
-    cmd="~/downloads/tor-browser_en-US/start-tor-browser.desktop" ;;
+    cmd="cd ~/downloads/tor-browser_en-US && ./start-tor-browser.desktop" ;;
 esac
 
 
