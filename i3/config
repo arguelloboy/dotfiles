@@ -126,4 +126,4 @@ bar {
         bindsym button5 nop
 }
 
-exec handle_wallpaper
+exec handle_wallpapers
