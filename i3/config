@@ -125,3 +125,5 @@ bar {
         bindsym button4 nop
         bindsym button5 nop
 }
+
+exec handle_wallpaper

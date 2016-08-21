@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ ! -z $1 ]; then
+    timeout=$1
+else
+    timeout=60
+fi
+
+while true; do
+    feh --bg-scale "/home/amit/.backgrounds/`ls ~/.backgrounds | shuf -n 1`"
+    sleep $timeout
+done

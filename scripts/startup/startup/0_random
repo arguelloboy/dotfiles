@@ -1,5 +1,0 @@
-#!/bin/bash
-
-terminator --command="todo -G; sleep 5; e" --title="TODOs" &>/dev/null &
-numlockx
-( sleep 3; sudo rfkill block bluetooth; ) &
