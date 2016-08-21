@@ -15,8 +15,11 @@ bindsym $mod+c exec chromium-browser
 # Lock
 bindsym Mod1+l exec i3lock -c 000000
 
-# kill focused window
+# Kill focused window
 bindsym $mod+Shift+q kill
+
+# Change background
+bindsym $mod+w exec ~/.scripts/startup/change_wallpaper
 
 #########################
 # => Focus              "
@@ -47,8 +50,6 @@ bindsym $mod+f fullscreen
 # => Layout             #
 #########################
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -126,4 +127,7 @@ bar {
         bindsym button5 nop
 }
 
-exec handle_wallpapers
+#########################
+# => Autostart          #
+#########################
+exec ~/.scripts/startup/handle_wallpapers

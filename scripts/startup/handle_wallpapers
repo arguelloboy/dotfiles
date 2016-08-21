@@ -6,7 +6,9 @@ else
     timeout=60
 fi
 
+DIR=`dirname "$(readlink -f "$0")"`
+
 while true; do
-    feh --bg-scale "/home/amit/.backgrounds/`ls ~/.backgrounds | shuf -n 1`"
+    $DIR/change_wallpaper
     sleep $timeout
 done
