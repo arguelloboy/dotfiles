@@ -8,11 +8,6 @@ instance=Master
 interval=once
 signal=10
 
-[iface]
-color=#00FF00
-interval=10
-separator=false
-
 [wifi]
 interval=10
 
