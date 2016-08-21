@@ -121,5 +121,7 @@ bindsym $mod+r mode "resize"
 #########################
 bar {
         position top
-        status_command i3status
+        status_command i3blocks
+        bindsym button4 nop
+        bindsym button5 nop
 }

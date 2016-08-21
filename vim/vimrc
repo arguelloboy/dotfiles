@@ -170,4 +170,5 @@ autocmd BufRead ~/.vimrc UltiSnipsAddFiletypes vimrc.vim
 "==> Deoplete
 let g:deoplete#enable_at_startup = 1
 "<==
+
 " vim:foldmethod=marker:foldmarker=\=\=>,<\=\=:
