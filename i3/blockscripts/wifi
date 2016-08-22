@@ -30,11 +30,11 @@ INTERFACE="${BLOCK_INSTANCE:-wlan0}"
     [[ "$(cat /sys/class/net/$INTERFACE/operstate)" = 'down' ]] && exit
 QUALITY=$(grep $INTERFACE /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
 
-
+EXTERNALIP=`curl -s ipinfo.io/ip`
 
 NAME=$(iwgetid -r)
 for i in {1..2}; do
-    echo $NAME $IPADDR $QUALITY% # full text
+    echo $NAME \($IPADDR/$EXTERNALIP\) $QUALITY% # full text
 done
 
 if [[ $QUALITY -lt 70 ]]; then
