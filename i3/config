@@ -24,6 +24,15 @@ bindsym $mod+Shift+q kill
 bindsym $mod+w exec ~/.scripts/startup/change_wallpaper
 
 #########################
+# => Scratchpad         #
+#########################
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+#########################
 # => Focus              "
 #########################
 # change focus
@@ -69,10 +78,10 @@ bindsym $mod+a focus parent
 #########################
 # => Workspaces         #
 #########################
-set $work1 "1 "
+set $work1 "1 "
 set $work2 "2 "
 set $work3 "3 "
-set $work4 "4 "
+set $work4 "4 "
 
 # switch to workspace
 bindsym $mod+1 workspace $work1
