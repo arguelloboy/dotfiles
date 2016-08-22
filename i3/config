@@ -2,8 +2,10 @@
 # => General            #
 #########################
 set $mod Mod4
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:Ubuntu 9
+# Set font size to 0.
+# Doesn't display title (Most of the time I don't need),
+# but displays 5px bar so I can see active window.
+font pango:DejaVu Sans Mono 0
 
 #########################
 # => Shortcuts          #
@@ -120,6 +122,14 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #########################
+# => Colors             #
+#########################
+# I don't care about text, no text
+# class                   border  backgr. text    indicator
+client.focused            #303030 #303030 #000000 #000000
+client.unfocused          #101010 #101010 #000000 #000000
+
+#########################
 # => Bar                #
 #########################
 bar {
@@ -128,6 +138,16 @@ bar {
         bindsym button4 nop
         bindsym button5 nop
         font pango:Ubuntu, Awesome 9
+
+        colors {
+            background #000000
+            separator  #000080
+            statusline #00A5FF
+            # class              border  backgr. text
+            focused_workspace    #007FD4 #000000 #007FD4
+            inactive_workspace   #000000 #000000 #007FD4
+            urgent_workspace     $active #900000 #ffffff
+        }
 }
 
 #########################

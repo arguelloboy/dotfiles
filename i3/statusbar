@@ -2,6 +2,10 @@ command=~/.dotfiles/i3/blockscripts/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+# color_good = "#00A5FF" #some neon blue
+# color_degraded = "#006298"
+# color_bad = "#FF0000"
+
 [volume]
 label=♪
 instance=Master
