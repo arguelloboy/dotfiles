@@ -37,9 +37,7 @@ for i in {1..2}; do
     echo $NAME $IPADDR $QUALITY% # full text
 done
 
-if [[ $QUALITY -ge 80 ]]; then
-    echo "#00A5FF"
-elif [[ $QUALITY -lt 80 ]]; then
+if [[ $QUALITY -lt 70 ]]; then
     echo "#006298"
 elif [[ $QUALITY -lt 40 ]]; then
     echo "#FF0000"
