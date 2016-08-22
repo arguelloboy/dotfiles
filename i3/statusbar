@@ -9,10 +9,11 @@ interval=once
 signal=10
 
 [wifi]
+label=
 interval=10
 
 [cpu_usage]
-label=CPU
+label=
 interval=5
 
 [battery]
@@ -20,5 +21,6 @@ label=⚡
 interval=5
 
 [time]
+label=
 command=date '+%H:%M:%S %d/%m/%Y'
 interval=1
