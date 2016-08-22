@@ -126,8 +126,8 @@ bindsym $mod+r mode "resize"
 #########################
 # I don't care about text, no text
 # class                   border  backgr. text    indicator
-client.focused            #303030 #303030 #000000 #000000
-client.unfocused          #101010 #101010 #000000 #000000
+client.focused            #303030 #303030 #000000 #303030
+client.unfocused          #101010 #101010 #000000 #303030
 
 #########################
 # => Bar                #
