@@ -67,10 +67,10 @@ bindsym $mod+a focus parent
 #########################
 # => Workspaces         #
 #########################
-set $work1 "1: terminal"
-set $work2 "2: web"
-set $work3 "3: chat"
-set $work4 "4: random"
+set $work1 "1: "
+set $work2 "2: "
+set $work3 "3: "
+set $work4 "4: "
 
 # switch to workspace
 bindsym $mod+1 workspace $work1
