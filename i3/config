@@ -15,7 +15,8 @@ bindsym $mod+t exec terminator
 bindsym $mod+c exec chromium-browser
 
 # Lock
-bindsym Mod1+l exec i3lock -c 000000
+# For suspend, need to add NO-PASSWORD in visudo for this command
+bindsym Mod1+l exec i3lock -c 000000 && sudo pm-suspend
 
 # Kill focused window
 bindsym $mod+Shift+q kill

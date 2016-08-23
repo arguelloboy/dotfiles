@@ -92,7 +92,7 @@ nmap <leader>w :w<cr>
 
 " Commands / functions
 map <leader><leader> :Encrypt<cr>
-nnoremap <expr> <leader>q OpenTmp()
+nnoremap <leader>q :e /tmp/scratch.tmp<cr>
 
 " Swapping 0 and ^, I like more the ^ functionality and 0 is easier to hit
 nnoremap 0 ^
@@ -141,10 +141,6 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-" Open a temporary file using mktemp
-function! OpenTmp()
-    return ":e" . system("mktemp") . "\n"
-endfunc
 "<==
 "==> HardTime
 let g:hardtime_allow_different_key = 1
