@@ -24,6 +24,10 @@ echo $num
     sleep 1
     num=`cat $filename`
     (( num-- ))
-    echo $num >$filename
+    if [ $num == "0" ]; then
+        rm $filename
+    else
+        echo $num >$filename
+    fi
     pkill -RTMIN+1 i3blocks
 ) &>/dev/null </dev/null & disown

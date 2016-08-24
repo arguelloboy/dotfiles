@@ -21,6 +21,7 @@ interval=2
 
 [cpu_usage]
 label=
+min_width= 10.00%
 interval=2
 
 [battery]
