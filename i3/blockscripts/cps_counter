@@ -1,0 +1,21 @@
+#!/bin/bash
+
+filename="count"
+
+if [ ! -f $filename ]; then
+    echo "0" >$filename
+fi
+
+num=`cat $filename`
+(( num++ ))
+echo $num >$filename
+
+echo $num
+echo $num
+
+(
+    sleep 1
+    num=`cat $filename`
+    (( num-- ))
+    echo $num >$filename
+) &>/dev/null </dev/null & disown

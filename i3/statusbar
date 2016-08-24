@@ -2,9 +2,11 @@ command=~/.dotfiles/i3/blockscripts/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-# color_good = "#00A5FF" #some neon blue
-# color_degraded = "#006298"
-# color_bad = "#FF0000"
+[cps_counter]
+label=cps:
+interval=once
+separator=true
+command=cd ~/.dotfiles/i3/blockscripts/; ./$BLOCK_NAME
 
 [volume]
 label=♪
@@ -14,15 +16,15 @@ signal=10
 
 [wifi]
 label=
-interval=10
+interval=2
 
 [cpu_usage]
 label=
-interval=5
+interval=2
 
 [battery]
 label=⚡
-interval=5
+interval=30
 
 [time]
 label=
