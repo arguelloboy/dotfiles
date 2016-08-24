@@ -24,6 +24,9 @@ bindsym $mod+Shift+q kill
 # Change background
 bindsym $mod+w exec ~/.scripts/startup/change_wallpaper
 
+# Dmenu
+bindsym $mod+d exec dmenu_run
+
 #########################
 # => Scratchpad         #
 #########################
