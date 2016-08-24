@@ -7,6 +7,13 @@ if [ ! -f $filename ]; then
 fi
 
 num=`cat $filename`
+if [ -v $BLOCK_BUTTON ]; then
+    echo $num
+    echo $num
+    exit
+fi
+# else
+
 (( num++ ))
 echo $num >$filename
 
@@ -18,4 +25,5 @@ echo $num
     num=`cat $filename`
     (( num-- ))
     echo $num >$filename
+    pkill -RTMIN+1 i3blocks
 ) &>/dev/null </dev/null & disown

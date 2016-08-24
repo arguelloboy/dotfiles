@@ -4,9 +4,10 @@ markup=none
 
 [cps_counter]
 label=cps:
-interval=once
 separator=true
 command=cd ~/.dotfiles/i3/blockscripts/; ./$BLOCK_NAME
+signal=1
+interval=once
 
 [volume]
 label=♪

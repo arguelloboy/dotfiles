@@ -107,13 +107,6 @@ nnoremap <leader>pp :!python3 %
 " Notice the trailing space before EOL and lack of <cr>
 "<==
 "==> Autocmds and cmds
-" Highlights trailing spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
 
 command! Encrypt normal ggg?G``ggg~G``
 command! Bclose call <SID>BufcloseCloseIt()
