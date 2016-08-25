@@ -22,6 +22,7 @@ Plugin 'takac/vim-hardtime'
 
 " Color theme
 Plugin 'Lokaltog/vim-distinguished'
+Plugin 'nanotech/jellybeans.vim'
 
 " Ultisnips
 Plugin 'SirVer/ultisnips'
@@ -142,7 +143,8 @@ let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 "<==
 "==> Colorscheme
 set background=dark
-colorscheme distinguished
+" colorscheme distinguished
+colorscheme jellybeans
 "<==
 "==> UltiSnips
 " Settings
@@ -154,6 +156,9 @@ let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 
 " Automatic filetype for vim
 autocmd BufRead ~/.vimrc UltiSnipsAddFiletypes vimrc.vim
+"<==
+"==> Jedi-vim
+let g:jedi#use_splits_not_buffers = "left"
 "<==
 "==> Deoplete
 let g:deoplete#enable_at_startup = 1
