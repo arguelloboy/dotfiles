@@ -166,4 +166,4 @@ bar {
 #########################
 # => Autostart          #
 #########################
-exec ~/.scripts/startup/handle_wallpapers
+exec feh --bg-scale ~/.backgrounds/background.jpg

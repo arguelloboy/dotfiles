@@ -1,1 +1,0 @@
-feh --bg-scale "`echo ~`/.backgrounds/`ls ~/.backgrounds | shuf -n 1`"
