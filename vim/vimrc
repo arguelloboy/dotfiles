@@ -160,8 +160,5 @@ autocmd BufRead ~/.vimrc UltiSnipsAddFiletypes vimrc.vim
 "==> Jedi-vim
 let g:jedi#use_splits_not_buffers = "left"
 "<==
-"==> Deoplete
-let g:deoplete#enable_at_startup = 1
-"<==
 
 " vim:foldmethod=marker:foldmarker=\=\=>,<\=\=:
