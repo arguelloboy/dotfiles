@@ -148,7 +148,9 @@ let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 
 "==> Colorscheme
 set background=dark
-" colorscheme distinguished
+let g:jellybeans_overrides = {
+\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+\}
 colorscheme jellybeans
 "<==
 
