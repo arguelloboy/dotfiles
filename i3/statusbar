@@ -8,18 +8,27 @@ instance=Master
 interval=once
 signal=10
 
-[ping]
-label=
-interval=2
-
 [wifi]
 label=
+interval=5
+separator=false
+
+[external]
+interval=once
+separator=false
+
+[bandwidth]
 interval=2
+separator=false
+
+[ping]
+label=
+interval=5
 
 [cpu_usage]
 label=
 min_width= 10.00%
-interval=2
+interval=5
 
 [battery]
 label=⚡
