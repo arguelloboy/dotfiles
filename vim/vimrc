@@ -31,6 +31,7 @@ Plugin 'honza/vim-snippets'
 call vundle#end()
 filetype plugin indent on
 "<==
+
 "==> Options
 syntax enable 
 set history=500
@@ -67,6 +68,7 @@ set showcmd
 set clipboard=unnamed
 set mouse=nvc
 "<==
+
 "==> Maps
 " Window movement
 map <C-j> <C-W>j
@@ -107,13 +109,14 @@ nnoremap <leader>pp :!python3 %
 " pp in case I need arguments,
 " Notice the trailing space before EOL and lack of <cr>
 "<==
-"==> Autocmds and cmds
 
+"==> Autocmds and cmds
 command! Encrypt normal ggg?G``ggg~G``
 command! Bclose call <SID>BufcloseCloseIt()
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " Return to last edit position when opening files
 "<==
+
 "==> Functions
 " Close buffer
 function! <SID>BufcloseCloseIt()
@@ -136,16 +139,19 @@ function! <SID>BufcloseCloseIt()
 endfunction
 
 "<==
+
 "==> HardTime
 let g:hardtime_allow_different_key = 1
 let g:hardtime_default_on = 1
 let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 "<==
+
 "==> Colorscheme
 set background=dark
 " colorscheme distinguished
 colorscheme jellybeans
 "<==
+
 "==> UltiSnips
 " Settings
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -157,6 +163,7 @@ let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 " Automatic filetype for vim
 autocmd BufRead ~/.vimrc UltiSnipsAddFiletypes vimrc.vim
 "<==
+
 "==> Jedi-vim
 let g:jedi#use_splits_not_buffers = "left"
 "<==

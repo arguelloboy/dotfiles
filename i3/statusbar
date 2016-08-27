@@ -2,13 +2,6 @@ command=~/.dotfiles/i3/blockscripts/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-[cps_counter]
-label=cps:
-separator=true
-command=cd ~/.dotfiles/i3/blockscripts/; ./$BLOCK_NAME
-signal=1
-interval=once
-
 [volume]
 label=♪
 instance=Master
