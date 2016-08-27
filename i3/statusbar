@@ -8,6 +8,10 @@ instance=Master
 interval=once
 signal=10
 
+[ping]
+label=
+interval=2
+
 [wifi]
 label=
 interval=2
