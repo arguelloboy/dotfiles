@@ -25,8 +25,8 @@ IPADDR=$(ip addr show $IF | perl -n -e "/$AF ([^\/]+).* scope global/ && print \
 
 # Bandwith
 
-[[ -z $INLABEL ]] && INLABEL=" "
-[[ -z $OUTLABEL ]] && OUTLABEL=" "
+[[ -z $INLABEL ]] && INLABEL=" "
+[[ -z $OUTLABEL ]] && OUTLABEL=" "
 
 # Use the provided interface, otherwise the device used for the default route.
 INTERFACE=$(ip route | awk '/^default/ { print $5 ; exit }')
