@@ -35,7 +35,7 @@ filetype plugin indent on
 "==> Options
 syntax enable 
 set history=500
-set so=7
+set scrolloff=7
 
 set wildmenu
 set wildignore=*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
@@ -50,11 +50,11 @@ set incsearch
 set lazyredraw 
 set showmatch 
 set noerrorbells
-set tm=1000
+set timeoutlen=1000
 set foldcolumn=1
 set encoding=utf8
 set nobackup
-set nowb
+set nowritebackup
 set noswapfile
 set expandtab
 set smarttab
@@ -94,7 +94,7 @@ nmap <leader>e :e ~/.vimrc<cr>
 nmap <leader>w :w<cr>
 
 " Commands / functions
-map <leader><leader> :Encrypt<cr>
+nnoremap <leader><leader> :Encrypt<cr>
 nnoremap <leader>q :e /tmp/scratch.tmp<cr>
 
 " Swapping 0 and ^, I like more the ^ functionality and 0 is easier to hit
