@@ -3,6 +3,7 @@
 # Clearing screen
 alias c="echo -ne '\033c'"
 alias cl="c;l"
+alias cll="c;ll"
 alias ccd="c;cd"
 
 # Navigation
