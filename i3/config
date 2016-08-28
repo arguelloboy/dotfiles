@@ -149,8 +149,10 @@ bindsym $mod+r mode "resize"
 #########################
 # I don't care about text, no text
 # class                   border  backgr. text    indicator
-client.focused            #303030 #303030 #000000 #303030
-client.unfocused          #101010 #101010 #000000 #303030
+client.focused            #404040 #404040 #000000 #404040
+client.unfocused          #101010 #101010 #000000 #101010
+client.focused_inactive   #202020 #202020 #000000 #202020
+client.urgent             #700000 #700000 #000000 #700000
 
 #########################
 # => Bar                #
@@ -169,7 +171,7 @@ bar {
             # class              border  backgr. text
             focused_workspace    #007FD4 #000000 #007FD4
             inactive_workspace   #000000 #000000 #007FD4
-            urgent_workspace     $active #900000 #ffffff
+            urgent_workspace     #900000 #900000 #000000
         }
 }
 
