@@ -1,15 +1,12 @@
-#########################
-# => General            #
-#########################
+#==> General
 set $mod Mod4
 # Set font size to 0.
 # Doesn't display title (Most of the time I don't need),
 # but displays 5px bar so I can see active window.
 font pango:DejaVu Sans Mono 0
+#<==
 
-#########################
-# => Shortcuts          #
-#########################
+#==> Shortcuts
 # Programs
 bindsym $mod+t exec terminator
 bindsym $mod+c exec chromium-browser
@@ -26,19 +23,17 @@ bindsym $mod+w exec ~/.scripts/startup/change_wallpaper
 
 # Dmenu
 bindsym $mod+d exec dmenu_run
+#<==
 
-#########################
-# => Scratchpad         #
-#########################
+#==> Scratchpad
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
+#<==
 
-#########################
-# => Focus              "
-#########################
+#==> Focus
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -60,10 +55,9 @@ bindsym $mod+v split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
+#<==
 
-#########################
-# => Layout             #
-#########################
+#==> Layout
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+e layout toggle split
 
@@ -78,10 +72,9 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+#<==
 
-#########################
-# => Workspaces         #
-#########################
+#==> Workspaces
 set $work1 "1 "
 set $work2 "2 "
 set $work3 "3 "
@@ -94,24 +87,21 @@ bindsym $mod+3 workspace $work3
 bindsym $mod+4 workspace $work4
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $work1
-bindsym $mod+Shift+2 move container to workspace $work2
-bindsym $mod+Shift+3 move container to workspace $work3
-bindsym $mod+Shift+4 move container to workspace $work4
+bindsym $mod+Shift+1 move container to workspace $work1; workspace $work1
+bindsym $mod+Shift+2 move container to workspace $work2; workspace $work2
+bindsym $mod+Shift+3 move container to workspace $work3; workspace $work3
+bindsym $mod+Shift+4 move container to workspace $work4; workspace $work4
+#<==
 
-######
-# => assigns
-######
-assign [class="Terminator"] → $work1
+#==> Assigns
 assign [title="Chromium"] → $work2
 assign [class="Ghetto Skype"] → $work3
 assign [class="discord"] → $work3
 assign [class="Thunderbird"] → $work3
 assign [class="Tor Browser"] → $work2
+#<==
 
-#########################
-# => Reload and restart #
-#########################
+#==> Reload
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -120,10 +110,9 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # Shut down
 bindsym $mod+s exec "i3-nagbar -t warning -m 'Wanna shutdown?' -b 'Yes' 'xfce4-session-logout -h'"
+#<==
 
-#########################
-# => Resize             #
-#########################
+#==> Resize
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -143,20 +132,18 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+#<==
 
-#########################
-# => Colors             #
-#########################
+#==> Colors
 # I don't care about text, no text
 # class                   border  backgr. text    indicator
 client.focused            #404040 #404040 #000000 #404040
 client.unfocused          #101010 #101010 #000000 #101010
 client.focused_inactive   #202020 #202020 #000000 #202020
 client.urgent             #700000 #700000 #000000 #700000
+#<==
 
-#########################
-# => Bar                #
-#########################
+#==> Bar
 bar {
         position top
         status_command i3blocks
@@ -174,8 +161,10 @@ bar {
             urgent_workspace     #900000 #900000 #000000
         }
 }
+#<==
 
-#########################
-# => Autostart          #
-#########################
+#==> Autostart
 exec feh --bg-scale ~/.backgrounds/background.jpg
+#<==
+
+# vim:foldmethod=marker:foldmarker=\=\=>,<\=\=:
