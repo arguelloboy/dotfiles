@@ -107,6 +107,7 @@ assign [title="Chromium"] → $work2
 assign [class="Ghetto Skype"] → $work3
 assign [class="discord"] → $work3
 assign [class="Thunderbird"] → $work3
+assign [class="Tor Browser"] → $work2
 
 #########################
 # => Reload and restart #
