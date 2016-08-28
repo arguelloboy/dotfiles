@@ -12,22 +12,25 @@ signal=10
 label=
 interval=5
 separator=false
+separator_block_width=5
 
 [external]
 interval=once
 separator=false
+separator_block_width=5
 
 [bandwidth]
 interval=2
 separator=false
+separator_block_width=5
 
 [ping]
 label=
-interval=5
+interval=persistent
 
 [cpu_usage]
 label=
-min_width= 10.00%
+# min_width= 10.00%
 interval=5
 
 [battery]
