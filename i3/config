@@ -99,6 +99,15 @@ bindsym $mod+Shift+2 move container to workspace $work2
 bindsym $mod+Shift+3 move container to workspace $work3
 bindsym $mod+Shift+4 move container to workspace $work4
 
+######
+# => assigns
+######
+assign [class="Terminator"] → $work1
+assign [title="Chromium"] → $work2
+assign [class="Ghetto Skype"] → $work3
+assign [class="discord"] → $work3
+assign [class="Thunderbird"] → $work3
+
 #########################
 # => Reload and restart #
 #########################
